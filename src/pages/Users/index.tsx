@@ -1,4 +1,4 @@
-import { FormEvent, useEffect, useState } from 'react';
+import { ElementRef, FormEvent, useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { User } from './types';
 
@@ -8,6 +8,7 @@ export function Users() {
 	const [users, setUsers] = useState<User[]>([]);
 	const [searchParams, setSearchParams] = useSearchParams({ name: '' });
 	const name = searchParams.get('name') ?? '';
+	const nameInput = useRef<ElementRef<'input'>>(null);
 
 	useEffect(() => {
 		(async function () {
@@ -22,6 +23,11 @@ export function Users() {
 
 	function handleFormSubmit(event: FormEvent) {
 		event.preventDefault();
+
+		setSearchParams(prev => {
+			prev.set('name', nameInput.current?.value ?? '');
+			return prev;
+		}, { replace: true });
 	}
 
 	return (
@@ -29,13 +35,10 @@ export function Users() {
 			<h1>Users</h1>
 			<form onSubmit={handleFormSubmit}>
 				<input
+					ref={nameInput}
 					type="text"
 					placeholder="Name"
-					value={name}
-					onChange={event => setSearchParams(prev => {
-						prev.set('name', event.target.value);
-						return prev;
-					}, { replace: true })}
+					defaultValue={name}
 				/>
 				<button type="submit">search</button>
 			</form>
