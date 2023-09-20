@@ -1,13 +1,13 @@
 import { FormEvent, useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { User } from './types';
 
 import styles from './styles.module.css';
 
 export function Users() {
 	const [users, setUsers] = useState<User[]>([]);
-	const [name, setName] = useState('');
-
-	console.log('Users rendered!');
+	const [searchParams, setSearchParams] = useSearchParams({ name: '' });
+	const name = searchParams.get('name') ?? '';
 
 	useEffect(() => {
 		(async function () {
@@ -32,7 +32,10 @@ export function Users() {
 					type="text"
 					placeholder="Name"
 					value={name}
-					onChange={event => setName(event.target.value)}
+					onChange={event => setSearchParams(prev => {
+						prev.set('name', event.target.value);
+						return prev;
+					}, { replace: true })}
 				/>
 				<button type="submit">search</button>
 			</form>
