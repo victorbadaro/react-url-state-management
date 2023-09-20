@@ -1,0 +1,32 @@
+.users-container h1 {
+	margin-bottom: 12px;
+}
+
+.users-container form {
+	margin-bottom: 24px;
+	width: 300px;
+}
+
+.users-container form input {
+	display: block;
+	margin-bottom: 8px;
+	padding: 8px 16px;
+	width: 100%;
+	border-radius: 8px;
+	background-color: #222;
+	color: #fff;
+}
+
+.users-container form button {
+	display: block;
+	width: 100%;
+	padding: 8px 16px;
+	border-radius: 8px;
+	background-color: blueviolet;
+	color: #fff;
+	transition: filter 200ms;
+}
+
+.users-container form button:hover {
+	filter: brightness(0.9);
+}
