@@ -1,0 +1,40 @@
+{
+	"users": [
+		{
+			"id": 1,
+			"name": "Aurora Moody"
+		},
+		{
+			"id": 2,
+			"name": "Tyrone Cannon"
+		},
+		{
+			"id": 3,
+			"name": "Zak Garner"
+		},
+		{
+			"id": 4,
+			"name": "Daisie Mckinney"
+		},
+		{
+			"id": 5,
+			"name": "Beatrice Blackburn"
+		},
+		{
+			"id": 6,
+			"name": "Harley Blaese"
+		},
+		{
+			"id": 7,
+			"name": "Mikolaj Bentley"
+		},
+		{
+			"id": 8,
+			"name": "Eliana Romero"
+		},
+		{
+			"id": 9,
+			"name": "Tamsin Gray"
+		}
+	]
+}
