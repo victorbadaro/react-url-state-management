@@ -1,27 +1,43 @@
-# React + TypeScript + Vite
+# react-url-state-management
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![LEIAME.md](https://img.shields.io/badge/-Leia%20em%20Portugu%C3%AAs-brightgreen?style=for-the-badge)](./LEIAME.md)
 
-Currently, two official plugins are available:
+## Summary
+- [🧾 About](#-about)
+- [🚀 Main technologies](#-main-technologies)
+- [💻 Usage](#-usage)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧾 About
+An example of how to use the URL for state management in React.
 
-## Expanding the ESLint configuration
+## 🚀 Main technologies
+- [React](https://react.dev/)
+- [Typescript](https://www.typescriptlang.org/)
+- [React Router (DOM)](https://reactrouter.com/)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+_(You can see all the dependencies in the [package.json](./package.json) file)_
 
-- Configure the top-level `parserOptions` property like this:
+## 💻 Usage
+1. Clone the project (you'll need a [personal access token](https://docs.github.com/pt/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls)):
+   ```bash
+   git clone https://github.com/victorbadaro/react-url-state-management
+   ```
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+2. Access its directory:
+   ```bash
+   cd react-url-state-management
+   ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+3. Install its dependencies:
+   ```bash
+   yarn
+   # feel free to use another package manager, but you might want use yarn once there's already a yarn.lock file in the root directory
+   ```
+
+4. Start the server by running the `dev` script:
+   ```bash
+   yarn dev
+   ```
+---
+
+<p align="center">This project was created and developed with ❤ by <a href="https://github.com/victorbadaro">Victor Badaró</a></p>
